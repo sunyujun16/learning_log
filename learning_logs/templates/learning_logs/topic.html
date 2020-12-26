@@ -13,7 +13,10 @@
 
     {% block content %}
 
-        <p><a href="{% url 'learning_logs:new_entry' topic.id %}">新建条目(Add Entry)</a></p>
+        <p>
+            <a href="{% url 'learning_logs:edit_topic' topic.id %}">修改主题名</a>
+            <a href="{% url 'learning_logs:new_entry' topic.id %}">新建条目(Add Entry)</a>
+        </p>
 
         {% for entry in entries %}
             <div class="panel panel-default">

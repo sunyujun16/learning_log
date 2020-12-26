@@ -11,27 +11,30 @@ def index(request):
     return render(request, 'learning_logs/index.html')
 
 
-@ login_required
+# @ login_required
 def topics(request):
-    """显示所有主题"""
-    # topics = []
-    topics = Topic.objects.filter(owner=request.user).order_by('date_added')
-    # for topic in topic_set:
-    #     topics.append(topic)
-    context = {'topics': topics}  # topic键值对多写了一个colon, 好家伙找他妈俩小时!!! dear fuck!!!
+    """显示私有主题"""
+    if request.user.is_authenticated:
+        topics = Topic.objects.filter(owner=request.user).order_by('date_added')
+        login_status = True
+    else:
+        topics = Topic.objects.filter(public=True).order_by('date_added')
+        login_status = False
+
+    context = {'topics': topics, 'login_status': login_status}  # topic键值对多写了一个colon, 好家伙找他妈俩小时!!! dear fuck!!!
 
     return render(request, 'learning_logs/topics.html', context)
 
 
-@ login_required
+# @ login_required
 def topic(request, topic_id):
     """显示指定id的单个主题及其条目"""
 
     # 向数据库查询, 建议先在django shell当中尝试, 以确认无误
     # topic = Topic.objects.get(id=topic_id)
     topic = get_object_or_404(Topic, id=topic_id)
-    if topic.owner != request.user:
-        raise Http404
+    # if topic.owner != request.user:
+    #     raise Http404
     entries = topic.entry_set.order_by('-date_added')
 
     context = {'topic': topic, 'entries': entries}
@@ -99,6 +102,21 @@ def edit_entry(request, entry_id):
     return render(request, 'learning_logs/edit_entry.html', context)
 
 
-
+@login_required
+def edit_topic(request, topic_id):
+    """编辑主题"""
+    topic = get_object_or_404(Topic, id=topic_id)
+    if topic.owner != request.user:
+        raise Http404
+    if request.method != "POST":
+        # 使用当前主题填充表单
+        form = TopicForm(instance=topic)
+    else:
+        form = TopicForm(instance=topic, data=request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse('learning_logs:topics'))
+    context = {'topic': topic, 'form': form}
+    return render(request, 'learning_logs/edit_topic.html', context)
 
 

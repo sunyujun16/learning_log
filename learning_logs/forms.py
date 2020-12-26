@@ -6,8 +6,8 @@ class TopicForm(forms.ModelForm):
     """empty"""
     class Meta:
         model = Topic
-        fields = ['text', ]
-        labels = {'text': ''}
+        fields = ['text', 'public']
+        labels = {'text': '', 'public': '设为公开'}
 
 
 class Entry_form(forms.ModelForm):

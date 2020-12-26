@@ -9,6 +9,9 @@
 
     {% block header %}
         <h3>Topics</h3>
+        {% if not login_status %}
+            <h4>未登录用户仅他妈的能查看公开主题</h4>
+        {% endif %}
     {% endblock header %}
 
     {% block content %}
@@ -16,7 +19,17 @@
         <ul>
             {% for topic in topics %}
                 <li>
-                    <h3><a href="{% url 'learning_logs:topic' topic.id%}">{{ topic }}</a></h3>
+                {% if topic.public == True %}
+                    <h3>
+                        <a href="{% url 'learning_logs:topic' topic.id%}">{{ topic }}
+                        -用户({{ topic.owner }})-公开</a>
+                    </h3>
+                {% else %}
+                    <h3>
+                        <a href="{% url 'learning_logs:topic' topic.id%}">{{ topic }}
+                        -用户({{ topic.owner }})-私有</a>
+                    </h3>
+                {% endif %}
                 </li>
             {% empty %}
                 <li>no topics have been added yet.</li>
