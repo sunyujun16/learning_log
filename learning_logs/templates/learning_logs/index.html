@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学习笔记主页</title>
+    <style>
+        #welcome{
+            height: 50px;
+            background: grey;
+            color: wheat;
+            font-weight: bold;
+            font-size: 24px;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    {#<p>Learning Log</p>#}
+    <!--注释-->
+    {% extends "learning_logs/base.html" %}
+    {% block header %}
+        <div class="jumbotron">
+            <h1>Track your learning.</h1>
+        </div>
+    {% endblock header %}
+
+    {% block content %}
+        {#<div id="welcome">{{ user.username }}欢迎来到学习笔记!</div>#}
+        <h2>
+            <a href="{% url 'users:register' %}">注册你的学习笔记</a>来生成你专属的学习笔记, 并列出你正在学习的主题
+        </h2>
+        <h2>Learning log helps you keep track of your learning, for any topic you are learning about.</h2>
+        <h2>学习笔记帮助你跟踪任何你正在学习的主题的学习情况.</h2>
+    {% endblock content %}
+</body>
+</html>
