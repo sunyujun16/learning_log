@@ -10,7 +10,7 @@
     <title>学习笔记</title>
 
     {% bootstrap_css %}
-    {% bootstrap_javascript %}
+    {% bootstrap_javascript jquery=True %}
 
 </head>
 <body>
@@ -20,7 +20,7 @@
 
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                    aria-expanded="false" aria-controls="navbar">
+                    aria-expanded="false" aria-controls="navbar">展开
                 </button>
                 <a class="navbar-brand" href="{% url 'learning_logs:index' %}">学习笔记首页</a>
             </div>
