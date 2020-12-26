@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6c0632c4-0ef0-4824-8a39-448024ce141b" name="Default Changelist" comment="" />
+    <list default="true" id="6c0632c4-0ef0-4824-8a39-448024ce141b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning_log/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/learning_log/settings.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/learning_log/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="155" column="41" lean-forward="true" selection-start-line="155" selection-start-column="41" selection-end-line="155" selection-end-column="41" />
+            <state relative-caret-position="519">
+              <caret line="151" column="17" selection-start-line="151" selection-start-column="17" selection-end-line="151" selection-end-column="17" />
               <folding>
                 <element signature="e#312#321#0" expanded="true" />
               </folding>
@@ -25,14 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/learning_log/wsgi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-              <folding>
-                <element signature="e#228#237#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="190">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -80,6 +81,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -101,10 +105,10 @@
         <option value="$PROJECT_DIR$/learning_logs/templates/learning_logs/index.html" />
         <option value="$PROJECT_DIR$/learning_logs/templates/learning_logs/topic.html" />
         <option value="$PROJECT_DIR$/learning_logs/templates/learning_logs/new_entry.html" />
-        <option value="$PROJECT_DIR$/learning_log/settings.py" />
         <option value="$PROJECT_DIR$/learning_log/static/placeholder.txt" />
         <option value="$PROJECT_DIR$/learning_log/wsgi.py" />
         <option value="$PROJECT_DIR$/Procfile" />
+        <option value="$PROJECT_DIR$/learning_log/settings.py" />
       </list>
     </option>
   </component>
@@ -114,6 +118,7 @@
     <option name="width" value="1376" />
     <option name="height" value="893" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -162,6 +167,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -274,12 +280,12 @@
       <workItem from="1608772889114" duration="23352000" />
       <workItem from="1608855239761" duration="23726000" />
       <workItem from="1608941231065" duration="2519000" />
-      <workItem from="1608943840796" duration="798000" />
+      <workItem from="1608943840796" duration="1541000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70607000" />
+    <option name="totallyTimeSpent" value="71350000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
@@ -603,22 +609,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/learning_log/settings.py">
+    <entry file="file://$PROJECT_DIR$/learning_log/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="155" column="41" lean-forward="true" selection-start-line="155" selection-start-column="41" selection-end-line="155" selection-end-column="41" />
-          <folding>
-            <element signature="e#312#321#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="190">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/learning_log/wsgi.py">
+    <entry file="file://$PROJECT_DIR$/learning_log/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="519">
+          <caret line="151" column="17" selection-start-line="151" selection-start-column="17" selection-end-line="151" selection-end-column="17" />
           <folding>
-            <element signature="e#228#237#0" expanded="true" />
+            <element signature="e#312#321#0" expanded="true" />
           </folding>
         </state>
       </provider>
